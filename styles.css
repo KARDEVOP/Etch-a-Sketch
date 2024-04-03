@@ -1,0 +1,26 @@
+.grid-container {
+    display: grid;
+    gap: 0px;
+}
+
+.grid-item {
+    background-color: #f0f0f0;
+    border: 1px solid #c7c5c5;
+    transition: background-color 0.3s;
+}
+
+.grid-item:hover {
+    background-color: #d72e2e;
+}
+body {
+    background-color: #05206f62;
+}
+
+
+
+
+
+
+
+
+
