@@ -17,6 +17,8 @@ function popup()
 {
     mainPage.style.filter = 'blur(2px)';
     popupContainer.style.display = 'block';
+    text.textContent = 'Add grid value (Max: 100):';
+    textBox.style.border = '1px solid black';
 }
 //popupContainer
 const popupContainer = document.createElement('div');
@@ -53,9 +55,16 @@ const textBox = document.createElement('input');
 textBox.setAttribute('type', 'text');
 textBox.style.display = 'block';
 textBox.style.margin = '0 auto';
+// Event listener for enter key in textBox
+textBox.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        submitButton.click();
+    }
+});
 popupContainer.appendChild(textBox);
 //submitButton
 const submitButton = document.createElement('button');
+
 submitButton.textContent = 'Submit';
 submitButton.style.display = 'block';
 submitButton.style.margin = '0 auto';
@@ -124,3 +133,4 @@ button.style.top = '20%';
 button.style.left = '48%'; // Position a little right
 document.body.appendChild(button);
 button.addEventListener('click', popup);
+
